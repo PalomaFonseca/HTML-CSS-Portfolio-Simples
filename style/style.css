@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');/*Importando fontes do google fonts*/
+/*font-family: 'Passion One', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Passion+One:wght@700&display=swap');
+/*font-family: 'Dancing Script', cursive;*/
+
+:root {
+    /*Utilizando sistema de variáveis com CSS para facilitar a aplicação em todas as páginas*/
+    --color0: #80286F;
+    --color1: #FE9AEB;
+    --color2: #dba7d0fd;
+    --color3: #8592cc;
+    --color4: #7888ce;
+    --colordark: #16181D;
+    --colordarkcl: #22252c;
+
+    --standard_font: Verdana, Geneva, Tahoma, sans-serif;
+    --featured_font: 'Passion One', cursive, sans-serif;
+    --cursive_font: 'Dancing Script', cursive, sans-serif;
+}
+
+* {
+    margin: 0px;/*Zerando margens para melhor início da edição*/
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(to left, var(--color2), var(--color3));
+    font-family: var(--standard_font);
+    color: var(--colordarkcl);
+}
+
+header {
+    background-image: linear-gradient(to left, var(--color2), var(--color3));
+    min-height: 80px;/*O Header não pode ser menor do que 150px caso a resolução aumente muito*/ 
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--featured_font);
+    font-weight: normal;
+    font-size: 3.0em;
+    padding: 0px 10px 20px 10px;
+    text-align: center;
+}
+
+nav {
+    padding: 0px 10px 10px 10px;
+    margin-left: 120px;
+}
+
+nav > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px 5px 0px 0px;
+    padding: 5px;
+}
+
+nav > a:hover {
+    background-color: var(--color2);
+    color: var(--color4);
+    transition-duration: 0.5s;/*Ao passar mouse em cima, demora x segundos de transição*/
+}
+
+main {
+    max-width: 1000px;/*funciona bem em uma tela grande*/
+    min-width: 250px;/*funciona bem em uma tela pequena*/
+    margin: auto;
+    padding: 30px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px #00000080;
+    border-radius: 5px;
+}
+
+main img {
+    width: 30vh;/*Para não cortar imagens*/
+    float:left;/*Imagem a direita*/
+    margin: 0px 30px 15px 8px; 
+    border-radius: 10px 10px;
+    box-shadow: 2px 2px #00000050;
+}
+
+
+main h1 {
+    color: var(--color3);
+    font-family: var(--cursive_font);
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+main h2 {
+    color: var(--color4);
+    font-family: var(--cursive_font);
+    font-weight: normal;
+    padding: 5px 10px;
+    border-radius: 8px 0px 0px 8px;
+    font-size: 2em;
+}
+
+main p {
+    text-align: justify;
+    margin: 15px 0px;
+    text-indent: 30px;
+    line-height: 1.5em;/*Espaçamento entre linhas*/
+}
+
+main p.primeiro {
+    margin-bottom: 50px;
+}
+
+aside {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+}
+
+aside > h3 {
+    background-image: linear-gradient(to left, var(--color2), var(--color3));
+    color: whitesmoke;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;/*Margem negativa pois já tem um padding no aside*/
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 1px 1px #0000006e;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+/*Formação*/
+
+ul {
+    /*Não compatível com todo navegador*/
+    list-style-position: inside;/*O padrão é outside*/  
+    list-style-type: '\2714\00A0';/*Troca bolinha, 00A0 é espaço sem quebra*/
+    margin: 10px 10px;
+    margin: auto;
+}
+
+/*Contato*/
+
+.form {
+    max-width: 400px;
+    font-family: var(--standard_font);
+    font-size: 1.5em;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.form h2 {
+    color: var(--color3);
+    font-family: var(--cursive_font);
+}
+
+.form .principal {
+    margin-bottom: 20px;
+}
+
+.form a {
+    text-decoration: none;
+    color: var(--colordarkcl);
+    font-family: var(--standard_font);
+    font-size: 0.7em;
+}
+
+.form a:hover{
+    text-decoration: underline;
+    color: var(--color2);
+    font-weight: bold;
+}
+
+.form label {
+    font-family: var(--standard_font);
+    font-size: 0.7em;
+    margin: 10px;
+}
+
+.form input, textarea {
+    font-family: var(--standard_font);
+    font-size: 0.7em;
+    margin: 10px;
+    border: 1px solid var(--color4);
+    border-radius: 5px;
+    color: var(--colordarkcl);
+}
+
+.form input:hover, textarea:hover, input:focus, textarea:focus {
+    border-color: var(--color2);
+    background-color: var(--color2);
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.form button {
+    background-color: var(--color2);
+    color: var(--colordarkcl);
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--color4);
+    margin-left: 220px;
+}
+
+nav.contato {
+    margin-left: 420px;
+    font-size: 0.8em;
+}
+
+/*Portfólio*/
+
+main.portfolio {
+    margin-bottom: 290px;
+}
+
+main > h1.portfolio {
+    font-family: var(--standard_font);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+main > h2.portfolio {
+    font-family: var(--standard_font);
+    font-size: 1.2em;
+}
+
+main > h2.portfolio a {
+    text-decoration: underline;
+    color: var(--colordarkcl);
+    font-style: italic;
+}
+
+main > h2.portfolio a:hover {
+    text-decoration: none;
+    color: var(--color4);
+    font-size: 1.1em;
+}
